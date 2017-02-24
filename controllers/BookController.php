@@ -1,11 +1,9 @@
 <?php
-namespace controllers;
+namespace mvc\controllers;
 
-use models\Book;
+use mvc\models\Book;
 
-include '../models/Book.php';
-
-class BookController extends Controller
+class BookController
 {
     public $data = [];
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace models;
+namespace mvc\models;
 
 /**
  * Class Book
@@ -22,7 +22,7 @@ class Book
             $this->setAuthor($author);
             $this->setDescription($description);
         }
-        catch (\Exception $exception)
+        catch (\Throwable $exception)
         {
             throw new $this('por favor, verifique a entrada dos dados.');
         }

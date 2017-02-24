@@ -1,5 +1,6 @@
 <?php
-	include_once("../controllers/Controller.php");
+    require(__DIR__ . '/../vendor/autoload.php');
+    require(__DIR__ . '/../application.php');
 
-	$controller = new \controllers\Controller();
+	$controller = new \mvc\Application();
 	$controller->run();

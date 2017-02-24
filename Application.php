@@ -1,16 +1,16 @@
 <?php
-namespace controllers;
+namespace mvc;
 
-class Controller
+class Application
 {
-	const ROUTE = [
-	    'book' => [
-	        'index',
+    const ROUTE = [
+        'book' => [
+            'index',
             'view'
         ]
     ];
 
-	public $viewFile;
+    public $viewFile;
 
     private function route()
     {
@@ -19,9 +19,8 @@ class Controller
 
         if(array_key_exists($page, $this::ROUTE) && in_array($action, $this::ROUTE[$page]))
         {
-            include "../controllers/".ucwords(strtolower($page))."Controller.php";
-
-            $controller = new \controllers\BookController();
+            $class = "\\mvc\\controllers\\".ucwords(strtolower($page))."Controller";
+            $controller = new $class;
             $controller->viewFile = "../views/$page/$action.php";
             $controller->{'action'.ucwords(strtolower($action))}();
         }
@@ -32,9 +31,9 @@ class Controller
         }
 
     }
-	
-	public function run()
-	{
+
+    public function run()
+    {
         if (isset($_GET['page']))
         {
             $this->route();
@@ -43,5 +42,5 @@ class Controller
         {
             include '../views/default.php';
         }
-	}
+    }
 }
