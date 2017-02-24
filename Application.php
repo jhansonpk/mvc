@@ -1,8 +1,13 @@
 <?php
 namespace mvc;
 
+/**
+ * Class Application
+ * @package mvc
+ */
 class Application
 {
+    // Rotas que são permitidas, key => controller, values => actions
     const ROUTE = [
         'book' => [
             'index',
@@ -10,8 +15,11 @@ class Application
         ]
     ];
 
+    // arquivo da view que será carregado
+    // /views/NOME_DO_CONTROLLER/NOME_DA_ACTION
     public $viewFile;
 
+    // controle da action
     private function route()
     {
         $page = @$_GET['page'];
@@ -26,12 +34,14 @@ class Application
         }
         else
         {
+            // caso a requisição não esteja em ROUTE, 404.
             header("HTTP/1.1 404 Not Found");
             include("../views/error/404.php");
         }
 
     }
 
+    // inicia a aplicação
     public function run()
     {
         if (isset($_GET['page']))

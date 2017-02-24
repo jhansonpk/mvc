@@ -3,10 +3,18 @@ namespace mvc\controllers;
 
 use mvc\models\Book;
 
+/**
+ * Class BookController
+ * @package mvc\controllers
+ */
 class BookController
 {
     public $data = [];
 
+    /**
+     * hard code para popular o model Book
+     * BookController constructor.
+     */
     public function __construct()
     {
         $this->data[1] = new Book(1, 'Império De Tempestades - Vol.5 - Tomo 2 - Série Trono De Vidro', 'Sarah J. Maas', 'A história de Aelin Galathynius, sempre repleta de ação e intrigas, continua nesta segunda parte do quinto livro da série, Império de tempestades Aelin Galathyius sobreviveu a prisão, à perda de amigos e amores, às traições. Agora deve vencer seu maior medo para salvar o mundo. Com a vida e poder jurados ao povo que está determinada a salvar, a antiga assassina, conhecida como Celaena Sardothien, colocará a própria segurança em risco para proteger os seus. Mais que nunca, Aelin precisa de Rowan, de Dorian e de todos os aliados para conseguir descobrir a localização da relíquia sagrada capaz de banir de seu mundo a ameaça valg e os horrores libertados em Morath. Chegou a hora de levantar os exércitos de Erilea. De cobrar velhas dívidas... É hora de marchar contra o mais supremo dos males. E confiar na pureza de seu coração para trazer a luz.');
