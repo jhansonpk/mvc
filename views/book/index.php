@@ -2,9 +2,9 @@
 <hr>
 
 <?
-foreach ($this->data as $value)
+foreach ($books as $value)
 {
-    print "<a href='/?page=book&action=view&id={$value->getId()}'>{$value->getTitle()}</a>";
+    print "<a href='/book/view/{$value->getId()}'>{$value->getTitle()}</a>";
     print '<br>';
     print '<br>';
 }

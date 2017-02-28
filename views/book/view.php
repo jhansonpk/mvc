@@ -1,10 +1,10 @@
-<h>Livro <?=$model->getTitle()?></h>
+<h>Livro <?=$book->getTitle()?></h>
 <hr>
 <br>
-Author: <?=$model->getAuthor()?>
+Author: <?=$book->getAuthor()?>
 <br>
 <br>
-Description: <?=$model->getDescription()?>
+Description: <?=$book->getDescription()?>
 <hr>
 <br>
-<a href="/?page=book&action=index">Voltar</a>
+<a href="/book">Voltar</a>

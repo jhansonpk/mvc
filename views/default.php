@@ -3,7 +3,7 @@
 
 <body>
 
-<a href="/?page=book&action=index">Book</a>
+<a href="/book">Book</a>
 
 </body>
 </html>
