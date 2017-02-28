@@ -17,6 +17,10 @@
         "psr-4": {
             "mvc\\controllers\\": "controllers",
             "mvc\\models\\": "models"
-        }
+        },
+        "files": [
+            "Application.php",
+            "Model.php"
+        ]
     }
 }
