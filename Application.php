@@ -22,15 +22,18 @@ class Application
     // controle da action
     private function route()
     {
-        $page = @$_GET['page'];
-        $action = @$_GET['action'];
+        $uri = explode("/", $_SERVER['REQUEST_URI']);
 
-        if(array_key_exists($page, $this::ROUTE) && in_array($action, $this::ROUTE[$page]))
+        $controllerRoute = $uri[1] ?? '';
+        $actionRoute = $uri[2] ?? 'index';
+        $idRoute = $uri[3] ?? NULL;
+
+        if(array_key_exists($controllerRoute, $this::ROUTE) && in_array($actionRoute, $this::ROUTE[$controllerRoute]))
         {
-            $class = "\\mvc\\controllers\\".ucwords(strtolower($page))."Controller";
+            $class = "\\mvc\\controllers\\".ucwords(strtolower($controllerRoute))."Controller";
             $controller = new $class;
-            $controller->viewFile = "../views/$page/$action.php";
-            $controller->{'action'.ucwords(strtolower($action))}();
+            $controller->viewFile = "../views/$controllerRoute/$actionRoute.php";
+            $controller->{'action'.ucwords(strtolower($actionRoute))}($idRoute);
         }
         else
         {
@@ -44,7 +47,8 @@ class Application
     // inicia a aplicação
     public function run()
     {
-        if (isset($_GET['page']))
+
+        if ($_SERVER['REQUEST_URI'] != '/')
         {
             $this->route();
         }
