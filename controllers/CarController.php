@@ -22,6 +22,8 @@ class CarController
     {
         $books = $this->model->getBookList();
         include $this->viewFile;
+
+        $lista = "isso";
     }
 
     /**
