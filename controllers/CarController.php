@@ -32,4 +32,9 @@ class CarController
         $book = $this->model->getBook($id);
         include $this->viewFile;
     }
+
+    public function getModel()
+    {
+        // ....
+    }
 }
