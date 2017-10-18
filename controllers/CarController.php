@@ -47,4 +47,9 @@ class CarController
         $teste = ['a', 'c'];
 
     }
+
+    public function frontend()
+    {
+        
+    }
 }
