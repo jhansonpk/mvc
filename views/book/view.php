@@ -8,3 +8,8 @@ Description: <?=$book->getDescription()?>
 <hr>
 <br>
 <a href="/book">Voltar</a>
+
+<b>......</b>
+<b>......</b>
+<b>......</b>
+<b>......</b>
