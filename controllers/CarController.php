@@ -50,6 +50,7 @@ class CarController
 
     public function frontend()
     {
-        
+        // é isso mesmo
+        // outra coisa
     }
 }
