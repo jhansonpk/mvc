@@ -36,5 +36,10 @@ class CarController
     public function getModel()
     {
         // ....
+
+        $menu = [
+            'a',
+            'b'
+        ];
     }
 }
