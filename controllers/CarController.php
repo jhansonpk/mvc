@@ -8,8 +8,16 @@ asdasdas
  * @package mvc\controllers
  asdasdaasd
  */
+
+
 class CarController
 {
+
+    public function backend()
+    {
+        
+    }
+
     public $model;
 
     public function __construct()
