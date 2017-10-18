@@ -43,5 +43,7 @@ class CarController
             'a',
             'b'
         ];
+        $teste = ['a', 'c'];
+
     }
 }
