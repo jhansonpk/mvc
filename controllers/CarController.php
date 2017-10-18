@@ -36,5 +36,7 @@ class CarController
     public function getModel()
     {
         // ....
+
+        $teste = ['a', 'c'];
     }
 }
