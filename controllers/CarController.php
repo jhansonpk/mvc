@@ -18,12 +18,6 @@ class CarController
     }
 
 
-    public function actionIndex()
-    {
-        $books = $this->model->getBookList();
-        include $this->viewFile;
-    }
-
     /**
      * @param $id
      */
