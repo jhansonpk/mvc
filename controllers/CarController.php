@@ -22,6 +22,8 @@ class CarController
     {
         $books = $this->model->getBookList();
         include $this->viewFile;
+
+        $lista = "isso";
     }
 
     /**
@@ -36,5 +38,10 @@ class CarController
     public function getModel()
     {
         // ....
+
+        $menu = [
+            'a',
+            'b'
+        ];
     }
 }
